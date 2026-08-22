@@ -28,9 +28,9 @@ jobs:
       - name: Build image
         run: |
           docker build \
-            -t ${{ secrets.JFROG_REGISTRY }}/docker-local/${IMAGE_NAME}:${{ github.run_number }} .
+            -t ${{ secrets.JFROG_REGISTRY }}/${{secrets.JFROG_USERNAME}}/${IMAGE_NAME}:${{ github.run_number }} .
 
       - name: Push image
         run: |
           docker push \
-            ${{ secrets.JFROG_REGISTRY }}/docker-local/${IMAGE_NAME}:${{ github.run_number }}
+            ${{ secrets.JFROG_REGISTRY }}/${{secrets.JFROG_USERNAME}}/${IMAGE_NAME}:${{ github.run_number }}
