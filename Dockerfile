@@ -4,7 +4,7 @@ FROM nginx:1.27-alpine
 # Metadata
 LABEL maintainer="rameshbattala"
 LABEL application="my-web-app"
-LABEL version="1.0.0"
+LABEL version="2.0.0"
 
 # Copy application files
 COPY index.html /usr/share/nginx/html/index.html
